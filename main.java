@@ -84,39 +84,8 @@ public class main {
 //juego
 		for(int i = 0;persona && CPU;i++){
 		
-			System.out.println("          ROUND "+round);
-			round++;
-			
-			
-			System.out.println();
-		System.out.println(enemigo.getNombre()+":");
-		System.out.println("Salud: "+enemigo.getSalud());
-		System.out.println("Balas: "+enemigo.getRecarga()+"/6");
-		System.out.println();
-		System.out.println();
-		System.out.println(jugador.getNombre()+":");
-		System.out.println("Salud: "+jugador.getSalud());
-		System.out.println("Balas: "+jugador.getRecarga()+"/6");
-		System.out.println();
-		System.out.println();
-		System.out.println("Pulsa enter para continuar");
-		try{
-			System.in.read();
-		}catch(Exception e){}
-		
   //Accion del jugador
 		do{
-		System.out.println();
-		System.out.println("Que quieres hacer?:");
-		System.out.println();
-		System.out.println("1. Disparar");
-		System.out.println("2. Recargar");
-		System.out.println("3. Esquivar");
-		System.out.println();
-		opcion = S.nextInt();
-		}while(opcion <= 0 || opcion >= 4);
-		
-		System.out.println();
 		
 		switch(opcion){
 		 case 1:
@@ -212,13 +181,6 @@ public class main {
 				 enemigo.setNada(false);
 			}		
 		}
-
-		System.out.println();
-		System.out.println("Pulsa enter para continuar");
-		System.out.println();
-		try{
-			System.in.read();
-		}catch(Exception e){}
 		
 //Consecuencias
 		if(jugador.isDisparo() && enemigo.isDisparo()){
@@ -252,11 +214,6 @@ public class main {
 		if(jugador.isNada() && enemigo.isNada()){
 			System.out.println("no ha pasado nada");
 		}
-		System.out.println();
-		System.out.println("Pulsa enter para continuar");
-		try{
-			System.in.read();
-		}catch(Exception e){}
 		
 //verificacion de la vida
 		if(jugador.getSalud()==0){
@@ -266,11 +223,7 @@ public class main {
 			CPU = false;
 		}
 		
-		
-		
-		
-		
-		}
+				}
 		
 //ganador
 		if(persona){
